@@ -1,4 +1,7 @@
 
+
+// Routes
+// =============================================================
 // *********************************************************************************
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
@@ -49,7 +52,7 @@ module.exports = function(app) {
   // PUT route for updating todos. We can access the updated todo in req.body
   app.put("/api/users", function(req, res) {
     db.User.update({
-      name: req.body.name,
+      name: req.body.text,
       complete: req.body.complete
     }, {
       where: {
