@@ -1,0 +1,26 @@
+{
+  "name": "pictionarydb",
+  "version": "1.0.0",
+  "description": "setting up databases for Pictionary Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JenStokes79/PictionaryDB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JenStokes79/PictionaryDB/issues"
+  },
+  "homepage": "https://github.com/JenStokes79/PictionaryDB#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mysql2": "^1.5.2",
+    "sequelize": "^4.33.4"
+  }
+}
