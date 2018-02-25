@@ -6,7 +6,7 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-var db =  require("./models")
+//var db =  require("./models")
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
@@ -24,13 +24,13 @@ app.use(express.static("public"));
 // Routes
 // =============================================================
 require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app); //this works
 
 // Starting our Express app
 // =============================================================
-//force true drops tables and rebuilds
-db.sequelize.sync().then(function(){
+
+
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
-});
 });

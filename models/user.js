@@ -1,17 +1,27 @@
-module.exports = function(sequelize, DataTypes) {
-  var User = sequelize.define("User", {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1,140]
 
-      }
-  },
-  complete: {
-    type: DataTypes.BOOLEAN,
-    default: false
-  }
+var Sequelize = require("sequelize");
+
+
+var sequelize = require("../config/connection.js");
+
+
+
+  var User = sequelize.define("User", {
+ 
+    //save as a string
+    user_name: {
+    	type: Sequelize.STRING
+    },
+    //save as a integer
+    high_score: {
+    	type: Sequelize.INTEGER,
+    	allowNull: true,
+      defaultValue: null
+   }
+  }, {
+  	timestamps: true
   });
-  return User;
-};
+
+User.sync();
+
+  module.exports = User;

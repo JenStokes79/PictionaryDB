@@ -12,56 +12,43 @@
 // grab the orm from the config
 // (remember: connection.js -> orm.js -> route file)
 
-var db = require("../models")
+var User = require("../models/user.js")
 // Routes
 // =============================================================
+
 module.exports = function(app) {
 
-  // GET route for getting all of the todos
-  app.get("/api/users", function(req, res) {
-  db.User.findAll({}).then(function(result){
-    return res.json(result);
-    });
-  });
 
-  // POST route for saving a new todo. We can create a todo using the data on req.body
-  app.post("/api/users", function(req, res) {
-
-    db.User.create({
-      name: req.body.text,
-      complete: req.body.complete
-    }).then(function(dbUser){
-      res.json(dbUser);
-    });
-
-  });
-
-  // DELETE route for deleting todos. We can access the ID of the todo to delete in
-  // req.params.id
-  app.delete("/api/users", function(req, res) {
-
-    db.User.destroy({
+// //api to find high score
+ //api to find high score
+ app.get("/api", function(req, res) {
+    User.findAll({
       where: {
-        id: req.body.id
-      }
-    }).then (function(result){
-    console.log(result)
-    })
+        high_score: {
+          $gte: 10
+        }
+      },
+      order: [["high_score", "DESC"]]
+    }).then(function(results) {
+      res.json(results);
+    });
   });
 
-  // PUT route for updating todos. We can access the updated todo in req.body
-  app.put("/api/users", function(req, res) {
-    db.User.update({
-      name: req.body.text,
-      complete: req.body.complete
-    }, {
-      where: {
-        id: req.body.id
-      }
-    }).then(function(result){
-      res.json(result);
-    });
 
+
+// api to create a new user
+  	app.post("/api/new", function(req, res) {
+	//take new request
+	var user = req.body;
+	console.log("User Data:");
+    console.log(req.body);
+	//then add new user to database
+	User.create({
+		user_name: user.user_name,
+		high_score: null
+	});
 });
 
-};
+
+
+}
