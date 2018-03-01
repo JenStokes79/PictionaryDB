@@ -1,7 +1,7 @@
 
-$("#score-btn").on("click", function(){
+$("#highScore").on("click", function(){
 	//make a get request to our api to get high scores
-$.get("/api", function(data) {
+ $.get("/api", function(data) {
 
   // for each character that our server sends us back
   for (var i = 0; i < data.length; i++) {
@@ -27,7 +27,7 @@ $.get("/api", function(data) {
 
 
 //adds user to db on click
-$("#add-btn").on("click", function(){
+$("#submitName").on("click", function(){
 	//make new user
 	var newUser = {
 		//name form input

@@ -15,7 +15,7 @@ var sequelize = require("../config/connection.js");
     //save as a integer
     high_score: {
     	type: Sequelize.INTEGER,
-    	allowNull: true,
+    	//allowNull: true,
       defaultValue: null
    }
   }, {
