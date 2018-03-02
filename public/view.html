@@ -13,24 +13,26 @@
 <body>
 
 	<!-- we can change the name -->
-	<div class="title">DRawN! or DRawNLinE!</div>
+	<!-- <div class="title">DRawNLinE!</div> -->
+
 
 <!-- houses instrcutions, user name and highscores buttons -->
 	<div class="midContainer">
 		<div class="instructions">
-			Instructions
-			<p>Welcome to Pictionary! Submit your name and then click "Play" to get started. This is a multiplayer game and will require 2-6 players. If it is your turn simply draw on the canvas and type what your draw, if another player guesses the same word within the time limit you both will score a point!</p>
+			<h1><span class="rainbow"> Welcome to DRawNLinE!</span></h1>
 
+			<p>This is a multiplayer game and will require 2-6 players. When it is your turn, a word will appear for you to draw. You will have 30 seconds to draw on the canvas. If another player guesses the same word within the time limit you both will score a point!</p>
+			<p> Submit your name and then click "Play" to get started.</p>
+			<p>Good Luck!</p>
 
 				<div class="scoreBox">	
 					<form class="submitForm">
 						<input id="name" type="text" placeholder="Enter a Username">
 					</form>
-						<a href="/play"><button id="submitName" type="submit">Play</button></a>
-						<button id="highScore">High Scores</button>		
+						<a href="/play"><button class="rainbow" id="submitName" type="submit">Play</button></a>
+						<button class="rainbow" id="highScore">High Scores</button>		
 				</div>
-				<br>
-				<br>
+				
 
 				<div class="highScore" id="well-section">
 

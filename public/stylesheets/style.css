@@ -1,42 +1,58 @@
 body{
-	background-image: url("background2.png");
-
+	 background: linear-gradient(-90deg, blue, magenta, #42f4a7, purple);
+  
+}
+	
 }
 .title{
 	font-family: 'Permanent Marker', cursive;
-	margin: 5% 20% 0 20%;
+	color: black;
+	margin: 0% 25% 0 25%;
 	font-size: 400%;
 	text-align: center;
-	background-color: white;
-	border: 2px solid black;
+	background-color: transparent;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
 .midContainer{
 	margin: 5% 20% 10% 25%;
 	max-width: 100%
 	background-color: white;
 
-/*	border-top: 2px solid black;*/
+
+
 }
 .instructions{
 	font-family: 'Permanent Marker', cursive;
-	margin-left: 25%%;
+	color: white;
+	margin: -20% auto 0% auto;
+	height: auto;
 	width: 80%;
 	float: left;
-	font-size: 130%;
+	font-size: 160%;
 	text-align: center;
-	background-color: white;
+	background-color: transparent;
 	padding-left: 5%;
 	padding-right: 5%;
-	border: 2px solid black;
+	
+}
+
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 .scoreBox{
 	width: 80%;
 	text-align: center;
-	background-color: white;
+	background-color: transparent;
 	padding: 5%;
 	margin-left: 6%;
-/*	border-left: 2px solid black;
-	border-bottom: 2px solid black;*/
+
 }
 #highScore{
 	text-align: center;
@@ -47,11 +63,11 @@ body{
 	padding-bottom: :6px;
 	height: 35px;
 	width:40%;
-	border-radius: 5px;
-	box-shadow: 2px 3px #A9A9A9;
+	/*border-radius: 5px;
+	box-shadow: 2px 3px #A9A9A9;*/
 	margin: 10px;
 	position: relative;
-	
+
 }
 
 #highScore:hover{
@@ -64,22 +80,16 @@ body{
 .playBox{
 	margin: 0% 15% 0 15%;
 	background-color: white;
-	/*border-left: 2px solid black;
-	border-right: 2px solid black;*/
+	
 }
 .submitForm{
 	width: 95%;
 	float: left;
 	text-align: center;
 	margin-top: -5%;
-	background-color: white;
-
-/*	padding-right: 5%;*/
-/*	border-left: 2px solid black;*/
-
-
-
+	background-color: transparent;
 }
+
 .footer{
 	margin: 0 15% 0 15%;
 	background-color: white;
@@ -131,13 +141,14 @@ body{
 /*style for the players div*/
 .players1 {
 	font-family: 'Permanent Marker', cursive;
+	color: white;
 	margin: 0% 80% 0% 2%;
 	font-size: 100%;
 	text-align: center;
-	background-color: white;
-	border: 2px solid black;
+	background-color: transparent;
+	}
 
-}
+
 
 
 
